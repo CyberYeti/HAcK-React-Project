@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './cristian_aguilar_photo.jpg';
 import './App.css';
 
 function App() {
@@ -7,15 +7,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello! My name is Cristian Aguilar and I am a Mechanical Engineering major. My favorite hobbies include going to the gym, swimming, and learning new instruments.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/cjaguilar22"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          My GitHub
         </a>
       </header>
     </div>
