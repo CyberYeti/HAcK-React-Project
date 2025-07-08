@@ -27,18 +27,106 @@
 .Name-Text 
 {
   font-size: calc(20px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.button {
+  background-color: #009c05;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+@keyframes SpinAnim {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@keyframes ReverseSpinAnim {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+:root {
+  --SquareSize: 400px;
+}
+
+@keyframes Square-Move {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  12.5% {
+    transform: translateX(calc(var(--SquareSize) / 2)) translateY(0);
+  }
+  37.5% {
+    transform: translateX(calc(var(--SquareSize) / 2)) translateY(calc(-1 * var(--SquareSize)));
+  }
+  62.5% {
+    transform: translateX(calc(-1 * var(--SquareSize) / 2)) translateY(calc(-1 * var(--SquareSize)));
+  }
+  87.5% {
+    transform: translateX(calc(-1 * var(--SquareSize) / 2)) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes rainbowText {
+  0%   { color: red; }
+  14%  { color: orange; }
+  28%  { color: yellow; }
+  42%  { color: green; }
+  57%  { color: blue; }
+  71%  { color: indigo; }
+  85%  { color: violet; }
+  100% { color: red; }
+}
+
+
+.squareMove {
+  pointer-events: none;
+  animation: Square-Move infinite 5s linear;
+}
+
+.squareMove2{
+  pointer-events: none;
+  animation: Square-Move infinite 3s linear;
+}
+
+.rainbow{
+  animation: rainbowText 3s linear infinite;
+}
+
+.rainbowFast{
+  animation: rainbowText 2s linear infinite;
+}
+
+.spin {
+  pointer-events: none;
+  animation: SpinAnim infinite 1s linear;
+}
+
+.rspin {
+  pointer-events: none;
+  animation: ReverseSpinAnim infinite 1s linear;
+}
+
+.normal {
+  color: white;
 }
