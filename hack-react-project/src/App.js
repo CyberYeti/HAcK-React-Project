@@ -1,48 +1,24 @@
-import YMPic from './Yit-Meng_Pic.jpg';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import AmlanPic from './amlan_pic.jpg';
 import './App.css';
 
 function App() {
-  const [isFunnyActive, setFunny] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(false);
 
-  function toggleFunny(){
-    setFunny(!isFunnyActive)
+  function toggleDarkMode() {
+    setDarkMode(!isDarkMode);
   }
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
       <header className="App-header">
-        <div className= {isFunnyActive ? 'spin': 'normal'}>
-          <img src={YMPic} className="App-logo" alt="logo" />
-        </div>
-        <div className= {isFunnyActive ? 'squareMove': 'normal'}>
-          <div className= {isFunnyActive ? 'rspin': 'normal'}>
-            <div className= {isFunnyActive ? 'rainbowFast' : 'normal'}>
-              <p className="Name-Text">
-                Yit-Meng Chin
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className= {isFunnyActive ? 'squareMove2': 'normal'}>
-          <div className= {isFunnyActive ? 'spin' : 'normal'}>
-            <p className= {isFunnyActive ? 'rainbow' : 'normal'}>
-              Hello, my name is Yit-Meng, I am a CS major. <br/>
-              I enjoy reading books, solving rubiks cubes, <br/>
-              and building things with my CAD and 3D printing skills.<br/>
-              The creation I am most proud of is my self sorting connect 4 
-              I call <a className="App-link"
-              href="https://makerworld.com/en/models/737254-cascade-connect-a-self-sorting-connect-4#profileId-669364"
-              target="_blank"
-              rel="noopener noreferrer">
-                Cascade Connect
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-        <button className = 'button' onClick={toggleFunny}>
-          {isFunnyActive ? 'Disable Funny Mode' : 'Enable Funny Mode'}
+        <img src={AmlanPic} className="App-logo" alt="Amlan" />
+        <p className="Name-Text">
+          Hi, I'm Amlan and I'm a mechanical engineering major. <br />
+          I like to workout, play tennis, and make and 3D print projects with CAD.
+        </p>
+        <button className="button" onClick={toggleDarkMode}>
+          {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
         </button>
       </header>
     </div>
