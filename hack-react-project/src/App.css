@@ -30,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #55daff;
 }
 
 .button {
@@ -129,4 +129,12 @@
 
 .normal {
   color: white;
+}
+.text-hover {
+  transition: 0.3s ease;
+}
+.text-hover:hover {
+  transform: scale(1.1);
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
 }
