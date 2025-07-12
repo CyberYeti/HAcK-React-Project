@@ -32,10 +32,10 @@
   }
 }
 
-.hover {
+.text-hover {
   transition: 0.3s ease;
 }
-.hover:hover {
+.text-hover:hover {
   transform: scale(1.1);
   color: #00ffff;
   text-shadow: 0 0 10px #00ffff;
