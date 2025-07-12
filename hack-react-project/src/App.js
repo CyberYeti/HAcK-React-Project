@@ -54,20 +54,6 @@ function App() {
         </button>
       </header>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello! My name is Cristian Aguilar and I am a Mechanical Engineering major. My favorite hobbies include going to the gym, swimming, and learning new instruments.
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/cjaguilar22"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My GitHub
-        </a>
-      </header>
-      <header className="App-header">
         <img src={AmlanPic} className="App-logo" alt="Amlan" />
         <p className="Name-Text">
           Hi, I'm Amlan and I'm a mechanical engineering major. <br />
@@ -76,6 +62,20 @@ function App() {
         <button className="button" onClick={toggleDarkMode}>
           {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
         </button>
+      </header>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p className="text-hover">
+          Hello! My name is Cristian Aguilar and I am a Mechanical Engineering major. My favorite hobbies include going to the gym, swimming, and learning new instruments.
+        </p>
+        <a
+          className="App-link text-hover"
+          href="https://github.com/cjaguilar22"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          My GitHub
+        </a>
       </header>
     </div>
   );
