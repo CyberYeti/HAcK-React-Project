@@ -2,8 +2,15 @@ import logo from './cristian_aguilar_photo.jpg';
 import React, { useState } from 'react';
 import AmlanPic from './amlan_pic.jpg';
 import './App.css';
+import YMPic from './Yit-Meng_Pic.jpg';
 
 function App() {
+  const [isFunnyActive, setFunny] = useState(false);
+
+  function toggleFunny(){
+    setFunny(!isFunnyActive)
+  }
+
   const [isDarkMode, setDarkMode] = useState(false);
 
   function toggleDarkMode() {
